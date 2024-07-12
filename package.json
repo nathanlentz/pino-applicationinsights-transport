@@ -1,6 +1,6 @@
 {
-  "name": "@lentz/pino-applicationinsights-transport",
-  "version": "1.0.1",
+  "name": "pino-applicationinsights-transport",
+  "version": "1.0.0",
   "description": "A pino v7+ transport for sending logs to Application Insights",
   "files": [
     "dist"
