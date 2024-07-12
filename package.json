@@ -1,5 +1,5 @@
 {
-  "name": "@lntz/pino-applicationinsights-transport",
+  "name": "pino-applicationinsights-transport",
   "version": "1.0.0",
   "description": "A pino v7+ transport for sending logs to Application Insights",
   "files": [
