@@ -1,0 +1,58 @@
+{
+  "name": "@lntz/pino-applicationinsights-transport",
+  "version": "1.0.0",
+  "description": "A pino v7+ transport for sending logs to Application Insights",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsup src/index.ts",
+    "format": "biome format src --write && biome format test --write",
+    "lint": "biome lint src && biome lint test",
+    "lint:check": "biome check --apply-unsafe src && check --apply-unsafe test",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nathanlentz/pino-applicationinsights-transport.git"
+  },
+  "author": "Nate Lentz <n@natelentz.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathanlentz/pino-applicationinsights-transport/issues"
+  },
+  "homepage": "",
+  "keywords": [
+    "pino",
+    "applicationinsights",
+    "transport",
+    "typescript"
+  ],
+  "dependencies": {
+    "applicationinsights": "^3.2.1",
+    "p-retry": "^6.2.0",
+    "pino-abstract-transport": "^1.2.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.14.10",
+    "tsup": "^8.0.2",
+    "typescript": "^5.5.3",
+    "vitest": "^1.4.0"
+  },
+  "packageManager": "pnpm@9.5.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
