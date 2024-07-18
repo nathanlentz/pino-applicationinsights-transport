@@ -24,6 +24,11 @@ export interface PinoApplicationInsightsOptions {
    * Define this callback to get debug messages from this transport
    */
   onDebug?: (msg: string) => void;
+
+  /**
+   * Will log debug events if enabled
+   */
+  enableDebug?: boolean;
 }
 
 export interface LogItem {

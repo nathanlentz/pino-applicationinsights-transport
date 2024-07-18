@@ -1,4 +1,5 @@
-import { TelemetryClient } from "applicationinsights";
+import { defaultClient } from "applicationinsights";
+import type { TelemetryClient } from "applicationinsights";
 import type { PinoApplicationInsightsOptions } from "./types";
 
 export class ApplicationInsightsTransport {
@@ -14,7 +15,7 @@ export class ApplicationInsightsTransport {
   private config: PinoApplicationInsightsOptions;
 
   constructor(options: PinoApplicationInsightsOptions) {
-    this.context = new TelemetryClient();
+    this.context = defaultClient;
     this.config = options;
 
     if (options.onInit) {
@@ -42,9 +43,9 @@ export class ApplicationInsightsTransport {
       this.context.trackTrace(log);
     }
 
-    if (this.config.onDebug) {
-      this.config.onDebug(
-        `${data.name} Sending log to Application Insights completed`,
+    if (this.config.enableDebug) {
+      console.info(
+        `${data.name} Sending log to Application Insights completed`
       );
     }
   }
