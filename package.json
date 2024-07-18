@@ -1,6 +1,6 @@
 {
   "name": "pino-applicationinsights-transport",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A pino v7+ transport for sending logs to Application Insights",
   "files": [
     "dist"
